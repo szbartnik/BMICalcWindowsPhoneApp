@@ -94,9 +94,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataStore\BMIHistory\BMIHistory.xaml.cs">
-      <DependentUpon>BMIHistory.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Infrastructure\Converters.cs" />
     <Compile Include="Infrastructure\Extensions.cs" />
     <Compile Include="LocalizedStrings.cs" />
@@ -120,10 +117,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="DataStore\BMIHistory\BMIHistory.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,7 +155,6 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <DesignTimeOnly Include="DataStore\BMIHistory\BMIHistory.xsd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">

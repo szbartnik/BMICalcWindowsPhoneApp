@@ -13,7 +13,7 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="PortraitOrLandscape"  Orientation="Portrait"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
 	<phone:PhoneApplicationPage.Resources>
         <Storyboard x:Name="CalcBMIClickAnimationStart">
@@ -59,31 +59,37 @@
 			<phone:Panorama.Title>
 					<TextBlock Text="Fit&amp;Gym" FontSize="100" Margin="0,20,0,0" />
 			</phone:Panorama.Title>
-            <ScrollViewer>
-                <phone:PanoramaItem x:Name="BMICalcPanItem">
-        	        <phone:PanoramaItem.HeaderTemplate>
-				        <DataTemplate>
-					        <TextBlock Text="BMI Calculator" FontSize="50" />
-				        </DataTemplate>
-			        </phone:PanoramaItem.HeaderTemplate>
-                    <StackPanel>
-        		        <Grid d:IsLocked="True">
-        			        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Height" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" d:IsLocked="True"/>
-                            <local:AdvTextBox x:Name="TxtBoxBMIHeight" DefaultText="Type your height in cm..." TextWrapping="Wrap" InputScope="Digits" Text="Type your height in cm..." VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" d:IsLocked="True" />
-				        </Grid>
-        		        <Grid d:IsLocked="True">
-        			        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Weight" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" d:IsLocked="True" />
-                            <local:AdvTextBox x:Name="TxtBoxBMIWeight" DefaultText="Type your weight in kg..." TextWrapping="Wrap" InputScope="Digits" Text="Type your weight in kg..." VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" d:IsLocked="True" />
-				        </Grid>
-        		        <Grid>
-        		        	<Button x:Name="CalcBMIButton" Content="Calculate BMI" HorizontalAlignment="Center" Click="CalcBMIButton_Click" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" >
-        		        		<Button.RenderTransform>
-        		        			<CompositeTransform/>
-        		        		</Button.RenderTransform>
-        		        	</Button>
-        		        	<TextBlock x:Name="txtBMIResult" FontSize="54" VerticalAlignment="Center" HorizontalAlignment="Right"  Foreground="{Binding Prop.CurrentColor}" Opacity="1" Margin="0,-5,5,0" />
-        		        </Grid>
-                        <phone:LongListSelector ScrollViewer.VerticalScrollBarVisibility="Visible"  x:Name="BMIList" ItemsSource="{Binding Items}" d:IsLocked="True">
+            <phone:PanoramaItem x:Name="BMICalcPanItem">
+                <phone:PanoramaItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="BMI Calculator" FontSize="50" />
+                    </DataTemplate>
+                </phone:PanoramaItem.HeaderTemplate>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid d:IsLocked="True" Grid.Row="0">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Height" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" d:IsLocked="True"/>
+                        <local:AdvTextBox x:Name="TxtBoxBMIHeight" DefaultText="Type your height in cm..." TextWrapping="Wrap" InputScope="Digits" Text="Type your height in cm..." VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" d:IsLocked="True" />
+                    </Grid>
+                    <Grid d:IsLocked="True" Grid.Row="1">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Weight" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" d:IsLocked="True" />
+                        <local:AdvTextBox x:Name="TxtBoxBMIWeight" DefaultText="Type your weight in kg..." TextWrapping="Wrap" InputScope="Digits" Text="Type your weight in kg..." VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" d:IsLocked="True" />
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Button x:Name="CalcBMIButton" Content="Calculate BMI" HorizontalAlignment="Center" Click="CalcBMIButton_Click" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" >
+                            <Button.RenderTransform>
+                                <CompositeTransform/>
+                            </Button.RenderTransform>
+                        </Button>
+                        <TextBlock x:Name="txtBMIResult" FontSize="54" VerticalAlignment="Center" HorizontalAlignment="Right"  Foreground="{Binding Prop.CurrentColor}" Opacity="1" Margin="0,-5,5,0" />
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <phone:LongListSelector ScrollViewer.VerticalScrollBarVisibility="Auto"  x:Name="BMIList" ItemsSource="{Binding Items}" d:IsLocked="True">
                             <phone:LongListSelector.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="0" Background="{Binding CurrentColor}">
@@ -93,10 +99,9 @@
                                 </DataTemplate>
                             </phone:LongListSelector.ItemTemplate>
                         </phone:LongListSelector>
-                    </StackPanel>
-                </phone:PanoramaItem>
-            </ScrollViewer>
-
+                    </Grid>
+                </Grid>
+            </phone:PanoramaItem>
         </phone:Panorama>
 
     </Grid>

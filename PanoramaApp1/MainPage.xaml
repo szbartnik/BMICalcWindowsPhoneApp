@@ -33,23 +33,17 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-    </phone:PhoneApplicationPage.Resources>
-
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <!-- Converters -->
-        <Grid.Resources>
-            <my:BoolToStyleConverter
+        <my:BoolToStyleConverter
                 x:Key="BoolToStyleConv"
                 FalseValue="{StaticResource PhoneTextNormalStyle}"
                 TrueValue="{StaticResource PhoneTextExtraLargeStyle}" />
-            <my:BoolToBrushConverter
+        <my:BoolToBrushConverter
                 x:Key="BoolToBrushConv"
                 FalseValue="#00000000"
                 TrueValue="#ccFA9A50" />
-            <my:CustomConverter
-                x:Key="CustomConverter" />
-        </Grid.Resources>
-        
+    </phone:PhoneApplicationPage.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">      
         <!--Panorama control -->
         <phone:Panorama>
             <phone:Panorama.Background>

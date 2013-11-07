@@ -31,18 +31,4 @@ namespace PanoramaApp1.Infrastructure
             return value != null ? value.Equals(TrueValue) : false;
         }
     }
-
-    public class CustomConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
-        {
-            return "#ccFA9A50";
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
-        {
-            return "#ccFA9A50";
-        }
-    }
-
 }

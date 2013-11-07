@@ -15,6 +15,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
+    <!-- RESOURCES BEGIN -->
 	<phone:PhoneApplicationPage.Resources>
         <Storyboard x:Name="CalcBMIClickAnimationStart">
             <DoubleAnimation Duration="0:0:1.5" To="-93" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="CalcBMIButton" d:IsOptimized="True">
@@ -42,16 +43,24 @@
                 FalseValue="#00000000"
                 TrueValue="#ccFA9A50" />
     </phone:PhoneApplicationPage.Resources>
+    <!-- RESOURCES END -->
 
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/bmi.history.png" Text="BMI history"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/info.png" Text="Info"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <!-- MAIN ROOT BEGIN -->
     <Grid x:Name="LayoutRoot" Background="Transparent">      
         <!--Panorama control -->
         <phone:Panorama>
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="/Assets/BackgroundImage.jpg"/>
             </phone:Panorama.Background>
-
 			<phone:Panorama.Title>
-					<TextBlock Text="Fit&amp;Gym" FontSize="100" Margin="0,20,0,0" />
+                <TextBlock Text="Fit&amp;Gym" FontSize="100" Margin="0,20,0,0" />
 			</phone:Panorama.Title>
             <phone:PanoramaItem x:Name="BMICalcPanItem">
                 <phone:PanoramaItem.HeaderTemplate>
@@ -59,7 +68,7 @@
                         <TextBlock Text="BMI Calculator" FontSize="50" />
                     </DataTemplate>
                 </phone:PanoramaItem.HeaderTemplate>
-                <Grid>
+                <Grid Margin="0 -30 0 0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -97,7 +106,6 @@
                 </Grid>
             </phone:PanoramaItem>
         </phone:Panorama>
-
     </Grid>
-
+    <!-- MAIN ROOT END -->
 </phone:PhoneApplicationPage>

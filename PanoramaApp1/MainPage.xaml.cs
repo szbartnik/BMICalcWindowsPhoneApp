@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PanoramaApp1.Utilities;
 using System.Threading;
+using PanoramaApp1.Resources;
 
 namespace PanoramaApp1
 {
@@ -18,8 +19,6 @@ namespace PanoramaApp1
         public MainPage()
         {
             InitializeComponent();
-
-            // Set the data context of the listbox control to the sample data
             DataContext = App.BMIValuesViewModel;
         }
 
@@ -41,7 +40,7 @@ namespace PanoramaApp1
                 CalcBMIClickAnimationStart.Begin();
 
                 BMICalculator bmiCalc = new BMICalculator(validationOutput, App.BMIValuesViewModel.Items);
-                BMILimit bmiLimit = bmiCalc.ShowLimitList.FirstOrDefault(s => s.Equals(bmiCalc.ShowLimit));
+                BMILimit bmiLimit = bmiCalc.ShowLimitList.FirstOrDefault(x => x.Equals(bmiCalc.ShowLimit));
 
                 if (App.BMIValuesViewModel.Prop != null)
                     App.BMIValuesViewModel.Prop.CurrentColor = null;
@@ -53,6 +52,7 @@ namespace PanoramaApp1
                 txtBMIResult.Text = bmiCalc.Value.ToString();
 
                 CalcBMIClickAnimationEnd.Begin();
+
                 Deployment.Current.Dispatcher.BeginInvoke(() => {
                     BMIList.ScrollTo(App.BMIValuesViewModel.Prop);
                 });

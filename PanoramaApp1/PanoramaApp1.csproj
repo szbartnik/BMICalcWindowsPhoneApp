@@ -94,6 +94,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataStore\BMIHistory\BMIHistory.xaml.cs">
+      <DependentUpon>BMIHistory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\Converters.cs" />
     <Compile Include="Infrastructure\Extensions.cs" />
     <Compile Include="LocalizedStrings.cs" />
@@ -107,7 +110,9 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\BMICalculator.cs" />
+    <Compile Include="Utilities\BMIHistoryModel.cs" />
     <Compile Include="Utilities\BMILimit.cs" />
+    <Compile Include="Utilities\IsolatedStorageOps.cs" />
     <Compile Include="ViewModels\BMIBoundariesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +120,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="DataStore\BMIHistory\BMIHistory.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +162,7 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <DesignTimeOnly Include="DataStore\BMIHistory\BMIHistory.xsd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
@@ -166,7 +176,6 @@
       <Name>AdvControls</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

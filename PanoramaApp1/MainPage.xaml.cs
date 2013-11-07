@@ -10,12 +10,14 @@ using Microsoft.Phone.Shell;
 using PanoramaApp1.Utilities;
 using System.Threading;
 using PanoramaApp1.Resources;
+using System.Text;
 
 namespace PanoramaApp1
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        // Constructor
+        private const string _xmlBMIFileName = "bmiHistory.xml";
+
         public MainPage()
         {
             InitializeComponent();
@@ -31,8 +33,11 @@ namespace PanoramaApp1
             }
         }
 
-        private void CalcBMIButton_Click(object sender, RoutedEventArgs e)
+        private async void CalcBMIButton_Click(object sender, RoutedEventArgs e)
         {
+            ((Button)sender).IsEnabled = false;
+            (ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = false;
+
             BMIValidationOutput validationOutput = BMICalculator.ValidateInputText(TxtBoxBMIHeight.Text, TxtBoxBMIWeight.Text);
 
             if (validationOutput.Error == null)
@@ -56,11 +61,50 @@ namespace PanoramaApp1
                 Deployment.Current.Dispatcher.BeginInvoke(() => {
                     BMIList.ScrollTo(App.BMIValuesViewModel.Prop);
                 });
+
+                await IsolatedStorageOps.Append(
+                    new BMIHistoryModel {
+                        Date = DateTime.Now,
+                        Value = bmiCalc.Value },
+                    _xmlBMIFileName);
             }
             else
             {
                 MessageBox.Show(validationOutput.Error);
             }
+
+            
+            ((Button)sender).IsEnabled = true;
+            (ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = true;
+        }
+
+        private async void BMIHistory_Click(object sender, EventArgs e)
+        {
+            var list = await IsolatedStorageOps.Load<List<BMIHistoryModel>>(_xmlBMIFileName);
+            var output = new StringBuilder();
+
+            if (list.Count == 0)
+            {
+                output.Append("History is empty... so far");
+            }
+            else
+            {
+                int i = 0;
+
+                list.Sort((x, y) => y.Date.CompareTo(x.Date));
+                list.ForEach(x => output.Append(String.Format(
+                    "{0,2}. {1}\t{2}\n",
+                    ++i,
+                    x.Date.ToShortDateString(),
+                    x.Value)));
+            }
+            
+            MessageBox.Show(output.ToString(), "History of your BMI", MessageBoxButton.OK);
+        }
+
+        private void BMIAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Designed and created by\nSzymon Bartnik\n\nszbartnik@gmail.com", "About Fit&Gym App", MessageBoxButton.OK);
         }
     }
 }

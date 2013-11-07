@@ -18,21 +18,18 @@ namespace PanoramaApp1.Utilities
         {
             var list = await Load<List<BMIHistoryModel>>(file);
 
-            await Task.Run(() =>
+            if (list.Count > 19)
             {
-                if (list.Count > 19)
-                {
-                    BMIHistoryModel oldest = list.First();
+                BMIHistoryModel oldest = list.First();
 
-                    foreach (var item in list)
-                    {
-                        if (item.Date <= oldest.Date)
-                            oldest = item;
-                    }
-                    list.Remove(oldest);
+                foreach (var item in list)
+                {
+                    if (item.Date <= oldest.Date)
+                        oldest = item;
                 }
-                list.Add(obj);
-            });
+                list.Remove(oldest);
+            }
+            list.Add(obj);
 
             await list.Save(file);
         }
@@ -46,7 +43,7 @@ namespace PanoramaApp1.Utilities
 
                 try
                 {
-                    stream = storage.OpenFile(file, FileMode.OpenOrCreate);
+                    stream = storage.CreateFile(file);
                     XmlSerializer serializer = new XmlSerializer(typeof(T));
                     serializer.Serialize(stream, obj);
                 }

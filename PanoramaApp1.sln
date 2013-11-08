@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanoramaApp1", "PanoramaApp1\PanoramaApp1.csproj", "{36072EEA-1975-440A-B1DF-70EEF03CB102}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitAndGym", "PanoramaApp1\FitAndGym.csproj", "{36072EEA-1975-440A-B1DF-70EEF03CB102}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvControls", "AdvControls\AdvControls.csproj", "{B50114E4-7D35-475F-85AD-D2150D982094}"
 EndProject

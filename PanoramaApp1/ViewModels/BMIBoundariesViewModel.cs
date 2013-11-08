@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PanoramaApp1.Resources;
 using PanoramaApp1.Utilities;
 
 namespace PanoramaApp1.ViewModels
@@ -38,14 +39,14 @@ namespace PanoramaApp1.ViewModels
         
         public void LoadData()
         {
-            Items.Add(new BMILimit() { Description = "Very severely underweight", LowBoundary = 0, UpBoundary = 14.99M, Color = "#99FF0000" });
-            Items.Add(new BMILimit() { Description = "Severely underweight", LowBoundary = 15, UpBoundary = 15.99M, Color = "#ccFA9A50" });
-            Items.Add(new BMILimit() { Description = "Underweight", LowBoundary = 16, UpBoundary = 18.49M, Color = "#bbFFE600" });
-            Items.Add(new BMILimit() { Description = "Normal weight", LowBoundary = 18.5M, UpBoundary = 24.99M, Color = "#777FFF00" });
-            Items.Add(new BMILimit() { Description = "Overweight", LowBoundary = 25, UpBoundary = 29.99M, Color = "#bbFFE600" });
-            Items.Add(new BMILimit() { Description = "Moderately obese", LowBoundary = 30, UpBoundary = 34.99M, Color = "#ccFA9A50" });
-            Items.Add(new BMILimit() { Description = "Severely obese", LowBoundary = 35, UpBoundary = 39.99M, Color = "#99FF0000" });
-            Items.Add(new BMILimit() { Description = "Very severely obese", LowBoundary = 40, UpBoundary = Decimal.MaxValue, Color = "#99FF0000" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_0, LowBoundary = 0, UpBoundary = 14.99M, Color = "#99FF0000" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_1, LowBoundary = 15, UpBoundary = 15.99M, Color = "#ccFA9A50" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_2, LowBoundary = 16, UpBoundary = 18.49M, Color = "#bbFFE600" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_3, LowBoundary = 18.5M, UpBoundary = 24.99M, Color = "#777FFF00" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_4, LowBoundary = 25, UpBoundary = 29.99M, Color = "#bbFFE600" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_5, LowBoundary = 30, UpBoundary = 34.99M, Color = "#ccFA9A50" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_6, LowBoundary = 35, UpBoundary = 39.99M, Color = "#99FF0000" });
+            Items.Add(new BMILimit() { Description = AppResources.BMILimitLvl_7, LowBoundary = 40, UpBoundary = Decimal.MaxValue, Color = "#99FF0000" });
             
             IsDataLoaded = true;
         }

@@ -48,8 +48,8 @@
     <!-- APPLICATION BAR BEGIN -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton x:Name="BMIHistoryButton" Click="BMIHistory_Click" IconUri="/Assets/AppBar/bmi.history.png" Text="bmi history"/>
-            <shell:ApplicationBarIconButton Click="BMIAbout_Click" IconUri="/Assets/AppBar/info.png" Text="about"/>
+            <shell:ApplicationBarIconButton x:Name="BMIHistoryButton" Click="BMIHistory_Click" IconUri="/Assets/AppBar/bmi.history.png" Text="bmi history" />
+            <shell:ApplicationBarIconButton Click="BMIAbout_Click" IconUri="/Assets/AppBar/info.png" Text="about "/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
     <!-- APPLICATION BAR END -->
@@ -67,7 +67,7 @@
             <phone:PanoramaItem x:Name="BMICalcPanItem">
                 <phone:PanoramaItem.HeaderTemplate>
                     <DataTemplate>
-                        <TextBlock Text="BMI Calculator" FontSize="50" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.BMICalculatorPanoramaHeaderText, Source={StaticResource LocalizedStrings}}" FontSize="50" />
                     </DataTemplate>
                 </phone:PanoramaItem.HeaderTemplate>
                 <Grid Margin="0 -30 0 0">
@@ -77,16 +77,16 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Grid d:IsLocked="True" Grid.Row="0">
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Height" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" d:IsLocked="True"/>
-                        <local:AdvTextBox x:Name="TxtBoxBMIHeight" DefaultText="Type your height in cm..." TextWrapping="Wrap" InputScope="Digits" Text="Type your height in cm..." VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" d:IsLocked="True" />
+                    <Grid Grid.Row="0">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.BMICalculatatorHeightLabelValue, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30"/>
+                        <local:AdvTextBox x:Name="TxtBoxBMIHeight" DefaultText="Type your height in cm..." TextWrapping="Wrap" InputScope="Digits" Text="{Binding Path=LocalizedResources.BMICalculatatorHeightTextboxDefaultValue, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" />
                     </Grid>
-                    <Grid d:IsLocked="True" Grid.Row="1">
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Weight" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" d:IsLocked="True" />
-                        <local:AdvTextBox x:Name="TxtBoxBMIWeight" DefaultText="Type your weight in kg..." TextWrapping="Wrap" InputScope="Digits" Text="Type your weight in kg..." VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" d:IsLocked="True" />
+                    <Grid Grid.Row="1">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.BMICalculatatorWeightLabelValue, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" />
+                        <local:AdvTextBox x:Name="TxtBoxBMIWeight" DefaultText="Type your weight in kg..."  TextWrapping="Wrap" InputScope="Digits" Text="{Binding Path=LocalizedResources.BMICalculatatorWeightTextboxDefaultValue, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" />
                     </Grid>
                     <Grid Grid.Row="2">
-                        <Button x:Name="CalcBMIButton" Content="Calculate BMI" HorizontalAlignment="Center" Click="CalcBMIButton_Click" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" >
+                        <Button x:Name="CalcBMIButton" Content="{Binding LocalizedResources.BMICalculatatorExecuteButtonText, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center" Click="CalcBMIButton_Click" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
                             <Button.RenderTransform>
                                 <CompositeTransform/>
                             </Button.RenderTransform>

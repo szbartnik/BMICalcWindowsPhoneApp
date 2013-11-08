@@ -85,7 +85,7 @@ namespace PanoramaApp1
 
             if (list.Count == 0)
             {
-                output.Append("History is empty... so far");
+                output.Append(AppResources.BMIHistoryIsEmptyPlaceholder);
             }
             else
             {
@@ -99,12 +99,20 @@ namespace PanoramaApp1
                     x.Value)));
             }
             
-            MessageBox.Show(output.ToString(), "History of your BMI", MessageBoxButton.OK);
+            MessageBox.Show(output.ToString(), AppResources.BMIHistoryWindowtTitle, MessageBoxButton.OK);
         }
 
         private void BMIAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Designed and created by\nSzymon Bartnik\n\nszbartnik@gmail.com", "About Fit&Gym App", MessageBoxButton.OK);
+            MessageBox.Show(
+                String.Format("{0}\n{1}\n\n{2}",
+                    AppResources.DesignedAndCreatedBySentence,
+                    AppResources.CreatorNameAndSurname,
+                    AppResources.CreatorEmail),
+                String.Format("{0} {1}",
+                    AppResources.AboutSentence,
+                    AppResources.ApplicationTitle),
+                MessageBoxButton.OK);
         }
     }
 }

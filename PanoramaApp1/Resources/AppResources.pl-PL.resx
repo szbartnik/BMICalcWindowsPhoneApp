@@ -122,62 +122,65 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>pl-PL</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
     <value>Fit&amp;Gym</value>
   </data>
   <data name="BMICalculatatorExecuteButtonText" xml:space="preserve">
-    <value>Calculate BMI</value>
+    <value>Oblicz BMI</value>
   </data>
   <data name="BMICalculatatorHeightLabelValue" xml:space="preserve">
-    <value>Height</value>
+    <value>Wzrost</value>
   </data>
   <data name="BMICalculatatorHeightTextboxDefaultValue" xml:space="preserve">
-    <value>Type your height in cm...</value>
+    <value>Podaj wzrost w cm...</value>
   </data>
   <data name="BMICalculatatorWeightLabelValue" xml:space="preserve">
-    <value>Weight</value>
+    <value>Waga</value>
   </data>
   <data name="BMICalculatatorWeightTextboxDefaultValue" xml:space="preserve">
-    <value>Type your weight in kg...</value>
+    <value>Podaj wagę w kg...</value>
   </data>
   <data name="BMICalculatorPanoramaHeaderText" xml:space="preserve">
-    <value>BMI Calculator</value>
+    <value>Kalkulator BMI</value>
   </data>
   <data name="BMILimitLvl_0" xml:space="preserve">
-    <value>Very severely underweight</value>
+    <value>Wygłodzenie</value>
   </data>
   <data name="BMILimitLvl_1" xml:space="preserve">
-    <value>Severely underweight</value>
+    <value>Wychudzenie</value>
   </data>
   <data name="BMILimitLvl_2" xml:space="preserve">
-    <value>Underweight</value>
+    <value>Niedowaga</value>
   </data>
   <data name="BMILimitLvl_3" xml:space="preserve">
-    <value>Normal weight</value>
+    <value>Waga prawidłowa</value>
   </data>
   <data name="BMILimitLvl_4" xml:space="preserve">
-    <value>Overweight</value>
+    <value>Nadwaga</value>
   </data>
   <data name="BMILimitLvl_5" xml:space="preserve">
-    <value>Moderately obese</value>
+    <value>Otyłość
+(I stopnia)</value>
   </data>
   <data name="BMILimitLvl_6" xml:space="preserve">
-    <value>Severely obese</value>
+    <value>Otyłość kliniczna
+(II stopnia)</value>
   </data>
   <data name="BMILimitLvl_7" xml:space="preserve">
-    <value>Very severely obese</value>
+    <value>Otyłość skrajna
+(III stopnia)</value>
   </data>
   <data name="AboutSentence" xml:space="preserve">
-    <value>About</value>
+    <value>O programie</value>
   </data>
   <data name="BMIHistoryIsEmptyPlaceholder" xml:space="preserve">
-    <value>History is empty... so far</value>
+    <value>Historia jest pusta... jak na razie</value>
   </data>
   <data name="BMIHistoryWindowtTitle" xml:space="preserve">
-    <value>History of your BMI</value>
+    <value>Historia Twoich BMI</value>
   </data>
   <data name="CreatorEmail" xml:space="preserve">
     <value>szbartnik@gmail.com</value>
@@ -186,6 +189,6 @@
     <value>Szymon Bartnik</value>
   </data>
   <data name="DesignedAndCreatedBySentence" xml:space="preserve">
-    <value>Designed and created by</value>
+    <value>Zaprojektowane i stworzone przez</value>
   </data>
 </root>

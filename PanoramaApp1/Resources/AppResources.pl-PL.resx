@@ -179,7 +179,7 @@
   <data name="BMIHistoryIsEmptyPlaceholder" xml:space="preserve">
     <value>Historia jest pusta... jak na razie</value>
   </data>
-  <data name="BMIHistoryWindowtTitle" xml:space="preserve">
+  <data name="BMIHistoryWindowTitle" xml:space="preserve">
     <value>Historia Twoich BMI</value>
   </data>
   <data name="CreatorEmail" xml:space="preserve">
@@ -190,5 +190,13 @@
   </data>
   <data name="DesignedAndCreatedBySentence" xml:space="preserve">
     <value>Zaprojektowane i stworzone przez</value>
+  </data>
+  <data name="ApBar_AboutButtonText" xml:space="preserve">
+    <value>o aplikacji</value>
+    <comment>max 11 chars</comment>
+  </data>
+  <data name="ApBar_HistoryButtonText" xml:space="preserve">
+    <value>hist. bmi</value>
+    <comment>max 11 chars</comment>
   </data>
 </root>

@@ -70,6 +70,24 @@ namespace PanoramaApp1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to about app.
+        /// </summary>
+        public static string ApBar_AboutButtonText {
+            get {
+                return ResourceManager.GetString("ApBar_AboutButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bmi history.
+        /// </summary>
+        public static string ApBar_HistoryButtonText {
+            get {
+                return ResourceManager.GetString("ApBar_HistoryButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fit&amp;Gym.
         /// </summary>
         public static string ApplicationTitle {
@@ -144,9 +162,9 @@ namespace PanoramaApp1.Resources {
         /// <summary>
         ///   Looks up a localized string similar to History of your BMI.
         /// </summary>
-        public static string BMIHistoryWindowtTitle {
+        public static string BMIHistoryWindowTitle {
             get {
-                return ResourceManager.GetString("BMIHistoryWindowtTitle", resourceCulture);
+                return ResourceManager.GetString("BMIHistoryWindowTitle", resourceCulture);
             }
         }
         

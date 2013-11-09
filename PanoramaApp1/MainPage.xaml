@@ -45,15 +45,6 @@
     </phone:PhoneApplicationPage.Resources>
     <!-- RESOURCES END -->
     
-    <!-- APPLICATION BAR BEGIN -->
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton x:Name="BMIHistoryButton" Click="BMIHistory_Click" IconUri="/Assets/AppBar/bmi.history.png" Text="bmi history" />
-            <shell:ApplicationBarIconButton Click="BMIAbout_Click" IconUri="/Assets/AppBar/info.png" Text="about "/>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
-    <!-- APPLICATION BAR END -->
-    
     <!-- MAIN ROOT BEGIN -->
     <Grid x:Name="LayoutRoot" Background="Transparent">      
         <!--Panorama control -->

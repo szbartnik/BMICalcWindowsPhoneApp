@@ -21,7 +21,23 @@ namespace PanoramaApp1
         public MainPage()
         {
             InitializeComponent();
+            BuildLocalizedApplicationBar();
             DataContext = App.BMIValuesViewModel;
+        }
+
+        private void BuildLocalizedApplicationBar()
+        {
+            ApplicationBar = new ApplicationBar();
+
+            var historyOfBMIButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/bmi.history.png", UriKind.RelativeOrAbsolute));
+            historyOfBMIButton.Click += BMIHistory_Click;
+            historyOfBMIButton.Text = AppResources.ApBar_HistoryButtonText;
+            ApplicationBar.Buttons.Add(historyOfBMIButton);
+
+            var aboutAppButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/info.png", UriKind.RelativeOrAbsolute));
+            aboutAppButton.Click += BMIAbout_Click;
+            aboutAppButton.Text = AppResources.ApBar_AboutButtonText;
+            ApplicationBar.Buttons.Add(aboutAppButton);
         }
 
         // Load data for the ViewModel Items
@@ -99,7 +115,7 @@ namespace PanoramaApp1
                     x.Value)));
             }
             
-            MessageBox.Show(output.ToString(), AppResources.BMIHistoryWindowtTitle, MessageBoxButton.OK);
+            MessageBox.Show(output.ToString(), AppResources.BMIHistoryWindowTitle, MessageBoxButton.OK);
         }
 
         private void BMIAbout_Click(object sender, EventArgs e)

@@ -14,6 +14,7 @@ namespace PanoramaApp1.Utilities
         public decimal LowBoundary { get; set; }
         public decimal UpBoundary { get; set; }
         public string Color { get; set; }
+        public string Info { get; set; }
 
         private string _currentColor;
 

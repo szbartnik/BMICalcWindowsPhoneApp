@@ -85,7 +85,7 @@
                         <TextBlock x:Name="txtBMIResult" FontSize="54" VerticalAlignment="Center" HorizontalAlignment="Right"  Foreground="{Binding Prop.CurrentColor}" Opacity="1" Margin="0,-5,5,0" />
                     </Grid>
                     <Grid Grid.Row="3">
-                        <phone:LongListSelector ScrollViewer.VerticalScrollBarVisibility="Auto"  x:Name="BMIList" ItemsSource="{Binding Items}" d:IsLocked="True">
+                        <phone:LongListSelector ScrollViewer.VerticalScrollBarVisibility="Auto"  x:Name="BMIList" ItemsSource="{Binding Items}" Tap="BMIList_Tap" d:IsLocked="True">
                             <phone:LongListSelector.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="0" Background="{Binding CurrentColor}">

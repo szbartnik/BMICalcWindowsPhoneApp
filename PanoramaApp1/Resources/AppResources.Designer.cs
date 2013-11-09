@@ -205,11 +205,33 @@ namespace PanoramaApp1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This result suggests you definitely should see your GP. It is very important to do not ignore symptoms.
+        ///
+        ///If you ignore your unambiguous BMI results your health will be critically threatened..
+        /// </summary>
+        public static string BMILimitLvl_0_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_0_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Severely underweight.
         /// </summary>
         public static string BMILimitLvl_1 {
             get {
                 return ResourceManager.GetString("BMILimitLvl_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This result suggests you are severly underweight which means you should seriously think about seeing your GP. 
+        ///
+        ///Of course you should eat more because your current BMI indicates that you might have some problems with your organism in the near future..
+        /// </summary>
+        public static string BMILimitLvl_1_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_1_Info", resourceCulture);
             }
         }
         
@@ -223,11 +245,33 @@ namespace PanoramaApp1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This result suggests you are underweight, which can affect health.
+        ///
+        ///Try to eat more..
+        /// </summary>
+        public static string BMILimitLvl_2_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_2_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Normal weight.
         /// </summary>
         public static string BMILimitLvl_3 {
             get {
                 return ResourceManager.GetString("BMILimitLvl_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This result suggest you are a healthy weight for your height.
+        ///
+        ///Maintaining a healthy weight decreases the risk of a range of serious health problems..
+        /// </summary>
+        public static string BMILimitLvl_3_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_3_Info", resourceCulture);
             }
         }
         
@@ -241,11 +285,33 @@ namespace PanoramaApp1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This result suggests you are overweight, which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+        ///
+        ///You should think about doing sports and changing your diet to be fit..
+        /// </summary>
+        public static string BMILimitLvl_4_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_4_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Moderately obese.
         /// </summary>
         public static string BMILimitLvl_5 {
             get {
                 return ResourceManager.GetString("BMILimitLvl_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This result suggests you are obese, which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+        ///
+        ///You should think about seeing your GP and definitely start doing sports and/or changing your current diet..
+        /// </summary>
+        public static string BMILimitLvl_5_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_5_Info", resourceCulture);
             }
         }
         
@@ -259,11 +325,35 @@ namespace PanoramaApp1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This result suggests you are at 2nd stadium of obesity which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+        ///
+        ///You definitely should see your GP and change your diet because your health is threatened..
+        /// </summary>
+        public static string BMILimitLvl_6_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_6_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Very severely obese.
         /// </summary>
         public static string BMILimitLvl_7 {
             get {
                 return ResourceManager.GetString("BMILimitLvl_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This result suggests you are at 3rd stadium of obesity which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+        ///
+        ///You definitely should see your GP and change your diet because your health is threatened.
+        ///
+        ///Your current lifestyle is unhealthy and you shouldn&apos;t ignore this..
+        /// </summary>
+        public static string BMILimitLvl_7_Info {
+            get {
+                return ResourceManager.GetString("BMILimitLvl_7_Info", resourceCulture);
             }
         }
         

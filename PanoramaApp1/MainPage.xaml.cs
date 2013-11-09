@@ -130,5 +130,14 @@ namespace PanoramaApp1
                     AppResources.ApplicationTitle),
                 MessageBoxButton.OK);
         }
+
+        private void BMIList_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            if (BMIList.SelectedItem is BMILimit)
+            {
+                var selectedbmiLimit = BMIList.SelectedItem as BMILimit;
+                MessageBox.Show(selectedbmiLimit.Info, selectedbmiLimit.Description, MessageBoxButton.OK);
+            }
+        }
     }
 }

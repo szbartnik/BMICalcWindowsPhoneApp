@@ -212,4 +212,46 @@
   <data name="BMIWeightInvalidRangeException" xml:space="preserve">
     <value>Waga powinna być w zakresie pomiędzy</value>
   </data>
+  <data name="BMILimitLvl_0_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że koniecznie powinieneś zobaczyć swojego lekarza pierwszego kontaktu. To bardzo ważne, by nie ignorować symptomów
+
+Jeśli zignorujesz swój jednoznaczny wynik BMI, Twoje zdrowie będze krytycznie zagrożone.</value>
+  </data>
+  <data name="BMILimitLvl_1_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że jesteś wychudzony, co oznacza, że powinieneś poważnie pomyśleć a wizycie u swojego lekarza pierwszego kontaktu.
+
+Oczywiście powinieneś jeść więcej, ponieważ Twoje bieżące BMI wykazuje, że możesz mieć pewne problemy ze swoim organizem w niedalekiej przyszłości.</value>
+  </data>
+  <data name="BMILimitLvl_2_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że masz niedowagę, co może wpłynąć na zdrowie.
+
+Spróbuj jeść więcej.</value>
+  </data>
+  <data name="BMILimitLvl_3_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że masz prawidłową wagę do swojego wzrostu.
+
+Utrzymywanie prawidłowej wagi zmniejsza ryzyko wystapienia wielu poważnych problemów zdrowotnych.</value>
+  </data>
+  <data name="BMILimitLvl_4_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że masz nadwagę, co zwiększa ryzyko wystąpienia chorób związanych z wysokim ciśnieniem, sercem i rakiem.
+
+Powinieneś pomyśleć o uprawianiu sportów i zmianie diety, by być zdrowym.</value>
+  </data>
+  <data name="BMILimitLvl_5_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że masz nadwagę, co zwiększa ryzyko wystąpienia chorób związanych z wysokim ciśnieniem, sercem i rakiem.
+
+Powinieneś pomyśleć o wizycie u swojego lekarza pierwszego kontaktu i koniecznie zacząć uprawiać sporty i/lub zmianie Twojej bieżącej diety.</value>
+  </data>
+  <data name="BMILimitLvl_6_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że masz nadwagę, co zwiększa ryzyko wystąpienia chorób związanych z wysokim ciśnieniem, sercem i rakiem.
+
+Powinieneś koniecznie zobaczyć swojego lekarza pierwszego kontaktu i zmienić swoją dietę, ponieważ Twoje zdrowie jest zagrożone.</value>
+  </data>
+  <data name="BMILimitLvl_7_Info" xml:space="preserve">
+    <value>Ten wynik sugeruje, że masz nadwagę, co zwiększa ryzyko wystąpienia chorób związanych z wysokim ciśnieniem, sercem i rakiem.
+
+Powinieneś koniecznie zobaczyć swojego lekarza pierwszego kontaktu i zmienić swoją dietę, ponieważ Twoje zdrowie jest zagrożone.
+
+Twój bieżący styl życia jest niezdrowy i nie powinieneś tego ignorować.</value>
+  </data>
 </root>

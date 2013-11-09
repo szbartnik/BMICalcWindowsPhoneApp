@@ -119,11 +119,9 @@
   </resheader>
   <data name="ResourceFlowDirection" xml:space="preserve">
     <value>LeftToRight</value>
-    <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
     <value>en-US</value>
-    <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
     <value>Fit&amp;Gym</value>
@@ -210,5 +208,47 @@
   </data>
   <data name="DesignedAndCreatedBySentence" xml:space="preserve">
     <value>Designed and created by</value>
+  </data>
+  <data name="BMILimitLvl_0_Info" xml:space="preserve">
+    <value>This result suggests you definitely should see your GP. It is very important to do not ignore symptoms.
+
+If you ignore your unambiguous BMI results your health will be critically threatened.</value>
+  </data>
+  <data name="BMILimitLvl_1_Info" xml:space="preserve">
+    <value>This result suggests you are severly underweight which means you should seriously think about seeing your GP. 
+
+Of course you should eat more because your current BMI indicates that you might have some problems with your organism in the near future.</value>
+  </data>
+  <data name="BMILimitLvl_2_Info" xml:space="preserve">
+    <value>This result suggests you are underweight, which can affect health.
+
+Try to eat more.</value>
+  </data>
+  <data name="BMILimitLvl_3_Info" xml:space="preserve">
+    <value>This result suggest you are a healthy weight for your height.
+
+Maintaining a healthy weight decreases the risk of a range of serious health problems.</value>
+  </data>
+  <data name="BMILimitLvl_4_Info" xml:space="preserve">
+    <value>This result suggests you are overweight, which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+
+You should think about doing sports and changing your diet to be fit.</value>
+  </data>
+  <data name="BMILimitLvl_5_Info" xml:space="preserve">
+    <value>This result suggests you are obese, which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+
+You should think about seeing your GP and definitely start doing sports and/or changing your current diet.</value>
+  </data>
+  <data name="BMILimitLvl_6_Info" xml:space="preserve">
+    <value>This result suggests you are at 2nd stadium of obesity which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+
+You definitely should see your GP and change your diet because your health is threatened.</value>
+  </data>
+  <data name="BMILimitLvl_7_Info" xml:space="preserve">
+    <value>This result suggests you are at 3rd stadium of obesity which increases the risk of becoming ill with problems such as high blood pressure, heart disease and cancer.
+
+You definitely should see your GP and change your diet because your health is threatened.
+
+Your current lifestyle is unhealthy and you shouldn't ignore this.</value>
   </data>
 </root>

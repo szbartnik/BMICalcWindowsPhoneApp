@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PanoramaApp1.Infrastructure;
+using PanoramaApp1.Resources;
 
 namespace PanoramaApp1.Utilities
 {
@@ -61,22 +62,30 @@ namespace PanoramaApp1.Utilities
 
             if (!decimal.TryParse(height, out hResult))
             {
-                output.Error = "Height - incorrect value";
+                output.Error = AppResources.BMIHeightInvalidInputException;
                 return output;
             }
             if (!decimal.TryParse(weight, out wResult))
             {
-                output.Error = "Weight - incorrect value";
+                output.Error = AppResources.BMIWeightInvalidInputException;
                 return output;
             }
             if (!hResult.Between(_minH, _maxH, true))
             {
-                output.Error = String.Format("Height value should be between {0} and {1}", _minH, _maxH);
+                output.Error = String.Format("{0} {1} {2} {3} cm",
+                    AppResources.BMIHeightInvalidRangeException,
+                    _minH,
+                    AppResources.AndConjuntion,
+                    _maxH);
                 return output;
             }
             if (!wResult.Between(_minW, _maxW, true))
             {
-                output.Error = string.Format("Weight value should be between {0} and {1}", _minW, _maxW);
+                output.Error = String.Format("{0} {1} {2} {3} kg",
+                    AppResources.BMIWeightInvalidRangeException,
+                    _minW,
+                    AppResources.AndConjuntion,
+                    _maxW);
                 return output;
             }
 

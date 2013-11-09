@@ -109,7 +109,7 @@ namespace PanoramaApp1
 
                 list.Sort((x, y) => y.Date.CompareTo(x.Date));
                 list.ForEach(x => output.Append(String.Format(
-                    "{0,2}. {1}\t{2}\n",
+                    "{0,2}. {1}\t{2:0.00}\n",
                     ++i,
                     x.Date.ToShortDateString(),
                     x.Value)));

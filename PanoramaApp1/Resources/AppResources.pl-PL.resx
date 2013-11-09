@@ -189,6 +189,9 @@
   <data name="DesignedAndCreatedBySentence" xml:space="preserve">
     <value>Zaprojektowane i stworzone przez</value>
   </data>
+  <data name="AndConjuntion" xml:space="preserve">
+    <value>i</value>
+  </data>
   <data name="ApBar_AboutButtonText" xml:space="preserve">
     <value>o aplikacji</value>
     <comment>max 11 chars</comment>
@@ -196,5 +199,17 @@
   <data name="ApBar_HistoryButtonText" xml:space="preserve">
     <value>hist. bmi</value>
     <comment>max 11 chars</comment>
+  </data>
+  <data name="BMIHeightInvalidInputException" xml:space="preserve">
+    <value>Wysokość - niepoprawna wartość</value>
+  </data>
+  <data name="BMIHeightInvalidRangeException" xml:space="preserve">
+    <value>Wysokość powinna być w zakresie pomiędzy</value>
+  </data>
+  <data name="BMIWeightInvalidInputException" xml:space="preserve">
+    <value>Waga - niepoprawna wartość</value>
+  </data>
+  <data name="BMIWeightInvalidRangeException" xml:space="preserve">
+    <value>Waga powinna być w zakresie pomiędzy</value>
   </data>
 </root>

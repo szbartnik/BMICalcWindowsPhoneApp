@@ -173,6 +173,9 @@
   <data name="AboutSentence" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="AndConjuntion" xml:space="preserve">
+    <value>and</value>
+  </data>
   <data name="ApBar_AboutButtonText" xml:space="preserve">
     <value>about app</value>
     <comment>max 11 chars</comment>
@@ -181,11 +184,23 @@
     <value>bmi history</value>
     <comment>max 11 chars</comment>
   </data>
+  <data name="BMIHeightInvalidInputException" xml:space="preserve">
+    <value>Height - incorrect value</value>
+  </data>
+  <data name="BMIHeightInvalidRangeException" xml:space="preserve">
+    <value>Height value should be between</value>
+  </data>
   <data name="BMIHistoryIsEmptyPlaceholder" xml:space="preserve">
     <value>History is empty... so far</value>
   </data>
   <data name="BMIHistoryWindowTitle" xml:space="preserve">
     <value>History of your BMI</value>
+  </data>
+  <data name="BMIWeightInvalidInputException" xml:space="preserve">
+    <value>Weight - incorrect value</value>
+  </data>
+  <data name="BMIWeightInvalidRangeException" xml:space="preserve">
+    <value>Weight value should be between</value>
   </data>
   <data name="CreatorEmail" xml:space="preserve">
     <value>szbartnik@gmail.com</value>

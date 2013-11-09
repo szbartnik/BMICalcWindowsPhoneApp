@@ -70,6 +70,15 @@ namespace PanoramaApp1.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to and.
+        /// </summary>
+        public static string AndConjuntion {
+            get {
+                return ResourceManager.GetString("AndConjuntion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to about app.
         /// </summary>
         public static string ApBar_AboutButtonText {
@@ -147,6 +156,24 @@ namespace PanoramaApp1.Resources {
         public static string BMICalculatorPanoramaHeaderText {
             get {
                 return ResourceManager.GetString("BMICalculatorPanoramaHeaderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height - incorrect value.
+        /// </summary>
+        public static string BMIHeightInvalidInputException {
+            get {
+                return ResourceManager.GetString("BMIHeightInvalidInputException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height value should be between.
+        /// </summary>
+        public static string BMIHeightInvalidRangeException {
+            get {
+                return ResourceManager.GetString("BMIHeightInvalidRangeException", resourceCulture);
             }
         }
         
@@ -237,6 +264,24 @@ namespace PanoramaApp1.Resources {
         public static string BMILimitLvl_7 {
             get {
                 return ResourceManager.GetString("BMILimitLvl_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight - incorrect value.
+        /// </summary>
+        public static string BMIWeightInvalidInputException {
+            get {
+                return ResourceManager.GetString("BMIWeightInvalidInputException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight value should be between.
+        /// </summary>
+        public static string BMIWeightInvalidRangeException {
+            get {
+                return ResourceManager.GetString("BMIWeightInvalidRangeException", resourceCulture);
             }
         }
         

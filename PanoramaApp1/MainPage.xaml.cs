@@ -11,6 +11,8 @@ using PanoramaApp1.Utilities;
 using System.Threading;
 using PanoramaApp1.Resources;
 using System.Text;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace PanoramaApp1
 {
@@ -21,8 +23,16 @@ namespace PanoramaApp1
         public MainPage()
         {
             InitializeComponent();
+            SetProperBg();
             BuildLocalizedApplicationBar();
             DataContext = App.BMIValuesViewModel;
+        }
+
+        private void SetProperBg()
+        {
+            if (Visibility.Visible != (Visibility)Application.Current.Resources["PhoneDarkThemeVisibility"])
+                BgProperty.ImageSource = new BitmapImage(new Uri("/Assets/BackgroundImageLight.jpg", UriKind.RelativeOrAbsolute));
+                    
         }
 
         private void BuildLocalizedApplicationBar()

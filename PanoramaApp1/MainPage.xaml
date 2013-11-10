@@ -50,7 +50,7 @@
         <!--Panorama control -->
         <phone:Panorama>
             <phone:Panorama.Background>
-                <ImageBrush ImageSource="/Assets/BackgroundImage.jpg"/>
+                <ImageBrush x:Name="BgProperty" ImageSource="/Assets/BackgroundImageDark.jpg"/>
             </phone:Panorama.Background>
 			<phone:Panorama.Title>
                 <TextBlock Text="Fit&amp;Gym" FontSize="100" Margin="0,20,0,0" />

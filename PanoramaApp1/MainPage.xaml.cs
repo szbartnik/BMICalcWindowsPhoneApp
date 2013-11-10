@@ -28,29 +28,7 @@ namespace PanoramaApp1
             DataContext = App.BMIValuesViewModel;
         }
 
-        private void SetProperBg()
-        {
-            if (Visibility.Visible != (Visibility)Application.Current.Resources["PhoneDarkThemeVisibility"])
-                BgProperty.ImageSource = new BitmapImage(new Uri("/Assets/BackgroundImageLight.jpg", UriKind.RelativeOrAbsolute));
-                    
-        }
-
-        private void BuildLocalizedApplicationBar()
-        {
-            ApplicationBar = new ApplicationBar();
-
-            var historyOfBMIButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/bmi.history.png", UriKind.RelativeOrAbsolute));
-            historyOfBMIButton.Click += BMIHistory_Click;
-            historyOfBMIButton.Text = AppResources.ApBar_HistoryButtonText;
-            ApplicationBar.Buttons.Add(historyOfBMIButton);
-
-            var aboutAppButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/info.png", UriKind.RelativeOrAbsolute));
-            aboutAppButton.Click += BMIAbout_Click;
-            aboutAppButton.Text = AppResources.ApBar_AboutButtonText;
-            ApplicationBar.Buttons.Add(aboutAppButton);
-        }
-
-        // Load data for the ViewModel Items
+        // Loading data
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (!App.BMIValuesViewModel.IsDataLoaded)
@@ -96,12 +74,29 @@ namespace PanoramaApp1
             }
             else
             {
-                MessageBox.Show(validationOutput.Error);
+                MessageBox.Show(validationOutput.Error, AppResources.Error, MessageBoxButton.OK);
             }
 
             
             ((Button)sender).IsEnabled = true;
             (ApplicationBar.Buttons[0] as ApplicationBarIconButton).IsEnabled = true;
+        }
+
+        #region ApplicationBar Builder & Events
+
+        private void BuildLocalizedApplicationBar()
+        {
+            ApplicationBar = new ApplicationBar();
+
+            var historyOfBMIButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/bmi.history.png", UriKind.RelativeOrAbsolute));
+            historyOfBMIButton.Click += BMIHistory_Click;
+            historyOfBMIButton.Text = AppResources.ApBar_HistoryButtonText;
+            ApplicationBar.Buttons.Add(historyOfBMIButton);
+
+            var aboutAppButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/info.png", UriKind.RelativeOrAbsolute));
+            aboutAppButton.Click += BMIAbout_Click;
+            aboutAppButton.Text = AppResources.ApBar_AboutButtonText;
+            ApplicationBar.Buttons.Add(aboutAppButton);
         }
 
         private async void BMIHistory_Click(object sender, EventArgs e)
@@ -140,6 +135,7 @@ namespace PanoramaApp1
                     AppResources.ApplicationTitle),
                 MessageBoxButton.OK);
         }
+        #endregion
 
         private void BMIList_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
@@ -148,6 +144,12 @@ namespace PanoramaApp1
                 var selectedbmiLimit = BMIList.SelectedItem as BMILimit;
                 MessageBox.Show(selectedbmiLimit.Info, selectedbmiLimit.Description, MessageBoxButton.OK);
             }
+        }
+
+        private void SetProperBg()
+        {
+            if (Visibility.Visible != (Visibility)Application.Current.Resources["PhoneDarkThemeVisibility"])
+                BgProperty.ImageSource = new BitmapImage(new Uri("/Assets/BackgroundImageLight.jpg", UriKind.RelativeOrAbsolute));
         }
     }
 }

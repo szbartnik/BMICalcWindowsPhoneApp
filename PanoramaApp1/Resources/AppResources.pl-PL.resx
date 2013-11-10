@@ -254,4 +254,7 @@ Powinieneś koniecznie zobaczyć swojego lekarza pierwszego kontaktu i zmienić 
 
 Twój bieżący styl życia jest niezdrowy i nie powinieneś tego ignorować.</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
 </root>

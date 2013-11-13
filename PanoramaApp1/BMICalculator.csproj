@@ -140,8 +140,12 @@
     <Content Include="Assets\AppIconSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\BackgroundImageDark.jpg" />
-    <Content Include="Assets\BackgroundImageLight.jpg" />
+    <Content Include="Assets\BackgroundImageDark.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\BackgroundImageLight.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

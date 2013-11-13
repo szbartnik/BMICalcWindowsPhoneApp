@@ -53,14 +53,9 @@
                 <ImageBrush x:Name="BgProperty" ImageSource="/Assets/BackgroundImageDark.jpg"/>
             </phone:Panorama.Background>
 			<phone:Panorama.Title>
-                <TextBlock Text="Fit&amp;Gym" FontSize="100" Margin="0,20,0,0" />
+                <TextBlock Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" FontSize="100" Margin="0,20,0,0" />
 			</phone:Panorama.Title>
             <phone:PanoramaItem x:Name="BMICalcPanItem">
-                <phone:PanoramaItem.HeaderTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Path=LocalizedResources.BMICalculatorPanoramaHeaderText, Source={StaticResource LocalizedStrings}}" FontSize="50" />
-                    </DataTemplate>
-                </phone:PanoramaItem.HeaderTemplate>
                 <Grid Margin="0 -30 0 0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -76,7 +71,7 @@
                         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.BMICalculatatorWeightLabelValue, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Margin="10,14,0,0" FontSize="30" />
                         <local:AdvTextBox x:Name="TxtBoxBMIWeight" DefaultText="{Binding Path=LocalizedResources.BMICalculatatorWeightTextboxDefaultValue, Source={StaticResource LocalizedStrings}}"  TextWrapping="Wrap" InputScope="Digits" Text="{Binding Path=LocalizedResources.BMICalculatatorWeightTextboxDefaultValue, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Margin="104,0,0,0" HorizontalAlignment="Left" Width="320" />
                     </Grid>
-                    <Grid Grid.Row="2">
+                    <Grid Grid.Row="2" Margin="0 0 0 20">
                         <Button x:Name="CalcBMIButton" Content="{Binding LocalizedResources.BMICalculatatorExecuteButtonText, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center" Click="CalcBMIButton_Click" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
                             <Button.RenderTransform>
                                 <CompositeTransform/>

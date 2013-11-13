@@ -134,8 +134,11 @@
   <ItemGroup>
     <Content Include="Assets\AppBar\bmi.history.png" />
     <Content Include="Assets\AppBar\info.png" />
-    <Content Include="Assets\ApplicationIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Assets\AppIconMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppIconSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\BackgroundImageDark.jpg" />
     <Content Include="Assets\BackgroundImageLight.jpg" />

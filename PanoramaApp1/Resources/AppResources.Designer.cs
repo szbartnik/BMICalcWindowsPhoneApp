@@ -97,7 +97,7 @@ namespace PanoramaApp1.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fit&amp;Gym.
+        ///   Looks up a localized string similar to BMI Calc.
         /// </summary>
         public static string ApplicationTitle {
             get {
@@ -147,15 +147,6 @@ namespace PanoramaApp1.Resources {
         public static string BMICalculatatorWeightTextboxDefaultValue {
             get {
                 return ResourceManager.GetString("BMICalculatatorWeightTextboxDefaultValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to BMI Calculator.
-        /// </summary>
-        public static string BMICalculatorPanoramaHeaderText {
-            get {
-                return ResourceManager.GetString("BMICalculatorPanoramaHeaderText", resourceCulture);
             }
         }
         

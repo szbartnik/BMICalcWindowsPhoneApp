@@ -6,13 +6,13 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FitAndGym")]
+[assembly: AssemblyTitle("BMI Calc")]
 [assembly: AssemblyDescription("BMI Calculator so far...")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Szymon Bartnik")]
-[assembly: AssemblyProduct("FitAndGym")]
+[assembly: AssemblyProduct("BMI Calc")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
-[assembly: AssemblyTrademark("FitAndGym")]
+[assembly: AssemblyTrademark("BMI Calc")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

@@ -124,7 +124,7 @@
     <value>en-US</value>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>Fit&amp;Gym</value>
+    <value>BMI Calc</value>
   </data>
   <data name="BMICalculatatorExecuteButtonText" xml:space="preserve">
     <value>Calculate BMI</value>
@@ -140,9 +140,6 @@
   </data>
   <data name="BMICalculatatorWeightTextboxDefaultValue" xml:space="preserve">
     <value>Type your weight in kg...</value>
-  </data>
-  <data name="BMICalculatorPanoramaHeaderText" xml:space="preserve">
-    <value>BMI Calculator</value>
   </data>
   <data name="BMILimitLvl_0" xml:space="preserve">
     <value>Very severely underweight</value>

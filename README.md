@@ -1,4 +1,4 @@
-WindowsPhoneBMIApp
+Windows Phone BMI Application
 =================
 
 BMI Calculator WindowsPhone 8 Application
